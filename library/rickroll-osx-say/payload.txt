@@ -1,0 +1,43 @@
+#!/bin/bash
+ATTACKMODE HID VID_0X05AC PID_0X021E STORAGE
+
+# Starting job (purple LED)
+LED R B 0
+
+# Start OSX Terminal
+QUACK GUI SPACE
+QUACK DELAY 1000
+QUACK STRING terminal
+QUACK ENTER
+
+QUACK DELAY 500
+QUACK STRING say We are no strangers to love
+QUACK ENTER
+
+QUACK DELAY 2200
+QUACK STRING say You know the rules and so do IIII
+QUACK ENTER
+
+QUACK DELAY 2000
+QUACK STRING say A full commitment is what Im thinking uhhhhhhhvvvvvv    v You wouldnt get this from any other guyyyyy
+QUACK ENTER
+
+QUACK DELAY 7000
+QUACK STRING say IIIIIII just want to tell you how Im feeling ..... g    ot to make you understand
+QUACK ENTER
+
+QUACK DELAY 7000
+QUACK STRING say Never gonna give you uhhhpppp... never gonna let you     down... never gonna run arounnnd and desert you
+QUACK ENTER
+
+QUACK DELAY 7000
+QUACK STRING say Never gonna give you uhhhpppp... never gonna let you     down... never gonna run arounnnd and desert you
+QUACK ENTER
+
+# Start wind-down
+QUACK DELAY 200
+QUACK STRING history -c\; diskutil eject /Volumes/BashBunny\; killall Terminal
+QUACK ENTER
+
+# job complete (RED)
+LED R 100

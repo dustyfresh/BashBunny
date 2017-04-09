@@ -1,0 +1,40 @@
+#!/bin/bash
+ATTACKMODE HID STORAGE
+
+# Get the switch position
+source bunny_helpers.sh
+
+# Starting job (purple LED)
+LED R B 0
+
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -WindowStyle Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\library\rickroll-microsoft-sam\say.exe') We are no strangers to love"
+QUACK ENTER
+
+QUACK DELAY 2200
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -WindowStyle Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\library\rickroll-microsoft-sam\say.exe') You know the rules and so do IIII"
+QUACK ENTER
+
+QUACK DELAY 2000
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -WindowStyle Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\library\rickroll-microsoft-sam\say.exe') A full commitment is what Im thinking uhhhhhhhvvvvvvv You wouldnt get this from any other guyyyyy"
+QUACK ENTER
+
+QUACK DELAY 7000
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -WindowStyle Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\library\rickroll-microsoft-sam\say.exe') IIIIIII just want to tell you how Im feeling ..... got to make you understand"
+QUACK ENTER
+
+QUACK DELAY 7000
+QUACK GUI r
+QUACK DELAY 500
+QUACK STRING powershell -WindowStyle Hidden ".((gwmi win32_volume -f 'label=''BashBunny''').Name+'payloads\library\rickroll-microsoft-sam\say.exe') Never gonna give you uhhhpppp... never gonna let you down... never gonna run arounnnd and desert you"
+QUACK ENTER
+
+# job complete (RED)
+LED R 100

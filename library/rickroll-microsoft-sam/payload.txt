@@ -1,9 +1,6 @@
 #!/bin/bash
 ATTACKMODE HID STORAGE
 
-# Get the switch position
-source bunny_helpers.sh
-
 # Starting job (purple LED)
 LED R B 0
 
